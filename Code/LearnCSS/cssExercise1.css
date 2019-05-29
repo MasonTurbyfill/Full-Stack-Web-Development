@@ -1,0 +1,21 @@
+body {
+    background-color: #339966;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+p {
+    color: yellow;
+}
+.header2 {
+    color: blue
+}
+
+#header3 {
+    color: deeppink;
+    background-color: white;
+    border: 2px solid black;
+}

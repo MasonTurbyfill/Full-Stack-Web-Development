@@ -1,0 +1,36 @@
+.nav {
+    background-color:slategray;
+    box-shadow: 2px 2px 4px black;
+}
+
+.nav a {
+    color: white;
+    text-decoration-line: none;
+    
+}
+
+.nav a:hover {
+    background-color: darkslategrey;
+}
+
+.picTable img {
+    box-shadow: 2px 2px 5px black;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, darkslategrey, darkolivegreen)
+}
+
+.video {
+    box-shadow: 5px 5px 10px black;
+}
+
+h1, h2, h3, h4, p {
+    font-family: sans-serif;
+    text-shadow: 1px 1px 3px black;
+    color: darkgray
+}
+
+hr {
+    box-shadow: 1px 1px 2px black;
+}
