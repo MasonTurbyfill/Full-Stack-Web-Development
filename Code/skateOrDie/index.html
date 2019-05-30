@@ -148,23 +148,27 @@
                             <img class="img-fluid imgCenter" src="assets/kickflip.jpg" alt="Kickflip">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-danger btn-lg btnCenter" type="button">Kickflip</button>
+                                    <button class="btn btn-danger btn-lg btnCenter" type="button" data-toggle="modal"
+                                        data-target=".kf-modal-lg">Kickflip</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-4">
-                            <img class="img-fluid imgCenter" src="assets/360flip.jpg" alt="Kickflip">
+                            <img class="img-fluid imgCenter" src="assets/360flip.jpg" alt="360 Fkip">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-danger btn-lg btnCenter" type="button">360 Flip</button>
+                                    <button class="btn btn-danger btn-lg btnCenter" type="button" data-toggle="modal"
+                                        data-target=".threesixty-modal-md">360 Flip</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-4">
-                            <img class="img-fluid imgCenter" src="assets/bscrook.jpg" alt="Kickflip">
+                            <img class="img-fluid imgCenter" src="assets/bscrook.jpg" alt="Back Side Crook">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-danger btn-lg btnCenter" type="button">Back Side Crook</button>
+                                    <button class="btn btn-danger btn-lg btnCenter" type="button" data-toggle="modal"
+                                        data-target=".bscrook-modal-sm">Back Side
+                                        Crook</button>
                                 </div>
                             </div>
                         </div>
@@ -218,6 +222,45 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kickflip Modal -->
+        <div class="modal fade kf-modal-lg" tabindex="-1" role="dialog"             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ilzy0viqVes"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>Kickflips are easy. Pop, flick, catch, land.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 360 Flip Modal -->
+        <div class="modal fade threesixty-modal-md" tabindex="-1" role="dialog"             aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ilzy0viqVes"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>360 flips are easy. Pop, scissor kick, catch, land.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backside Crook -->
+        <div class="modal fade bscrook-modal-sm" tabindex="-1" role="dialog"             aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ilzy0viqVes"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>Backside Crooks are sick! Nollie in, nollie out.</p>
                 </div>
             </div>
         </div>
