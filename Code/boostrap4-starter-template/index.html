@@ -8,39 +8,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
   </head>
-  <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-               <div class="row">
-                   <div class="col-6">
-
-                   </div>
-                    <div class="col-2">
-                        
-                    </div>
-                    <div class="col-4">
-                        
-                    </div>
-               </div>
+  <body class="signin-body">
+    <div class="container signin-container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-sm-12 col-md-8">
+          <div class="card signin-card">
+            <div class="card-body">
+              <img class="img-fluid signin-img" src="assets/DevslopesLogo.png" alt="DevslopesLogo">
+              <form class="signin-form">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                </div>
+                <button type="button" class="btn signin-btn btn-lg">Sign In</button>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Remember me <a href="#"> Need Help?</a>
+                  </label>
+                </div>
+              </form>
             </div>
-            <div class="col-sm-6">
-                Col 2
-            </div>
+          </div>
+          <a class="create-new-account" href="#">Create New Account</a>
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                Col 3
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                Col 4
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                Col 5
-            </div>
-        </div>
+        <div class="col"></div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
