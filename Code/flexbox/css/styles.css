@@ -187,20 +187,34 @@ img.headshot {
     text-align: right;
   }
 
-  ul.topnav.responsive li a.nav-link {
-    display: block;
-    line-height: 2;
-  }
-
   ul.topnav.responsive li {
     position: relative;
     top: 30px;
     right: 30px;
   }
+
+  ul.topnav.responsive li a.nav-link {
+    display: block;
+    line-height: 2;
+  }
+
+  .media-object {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .icon-right, .icon-left {
+      order: 1;
+  }
+
+  .blurb-wrapper-left, .blurb-wrapper-right {
+      order: 2;
+      padding: 2rem 0 0 0; 
+  }
 }
 
 @media (max-width: 599px) {
-    .portfolio-wrapper {
-        justify-content: center;
-    }
+  .portfolio-wrapper {
+    justify-content: center;
+  }
 }
