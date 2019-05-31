@@ -74,7 +74,7 @@ img.headshot {
   width: 100%;
 }
 
-.services {
+.services, .contact-container {
   background-color: #f1f3fa;
   padding: 4rem 1rem;
 }
@@ -127,13 +127,14 @@ img.headshot {
   margin-top: 3rem;
 }
 
-.quote-btn {
+.quote-btn, .submit-btn {
   color: #fff;
   background-color: #66b6d3;
   font-size: 18px;
   border: none;
   padding: 0.8rem 4rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
 .section-header {
@@ -162,6 +163,32 @@ img.headshot {
 .portfolio-box:hover {
   cursor: pointer;
   transform: scale(1.02);
+}
+
+form label {
+     font-size: 14px;
+}
+
+.form-group {
+    margin: 0 0 .75rem 0;
+}
+
+.form-control {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    color: #292b2c;
+    border-radius: 2px;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    display: block;
+}
+
+.submit-btn-wrapper {
+    margin: 4rem 0 0 0;
 }
 
 @media (max-width: 768px) {
