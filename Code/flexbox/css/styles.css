@@ -106,7 +106,8 @@ img.headshot {
   width: 180px;
 }
 
-.blurb-wrapper-left, .blurb-wrapper-right {
+.blurb-wrapper-left,
+.blurb-wrapper-right {
   flex: 1;
 }
 
@@ -118,6 +119,21 @@ img.headshot {
 .blurb-info {
   color: #646b90;
   font-size: 18px;
+}
+
+.quote-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.quote-btn {
+  color: #fff;
+  background-color: #66b6d3;
+  font-size: 18px;
+  border: none;
+  padding: 0.8rem 4rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
