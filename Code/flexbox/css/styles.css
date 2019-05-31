@@ -1,103 +1,111 @@
-html, body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
-    font-size: 1rem;
-    color: #303137;
-    margin: 0;
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 1rem;
+  color: #303137;
+  margin: 0;
 }
 
 .navbar {
-    display: flex;
-    padding: 10px;
-    max-width: 1140px;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
-.brand, .nav-link, a {
-    text-transform: uppercase;
-    color: #303137;
+.brand,
+.nav-link,
+a {
+  text-transform: uppercase;
+  color: #303137;
 }
 
 .brand {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .sensei {
-    color: #66b6d3;
+  color: #66b6d3;
 }
 
 .topnav {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
-.topnav .nav-link, a {
-    text-decoration: none;
-    padding-left: 20px;
-    font-size: 20px;
+.topnav .nav-link,
+a {
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 20px;
 }
 
 .dropdownLink {
-    display: none;
+  display: none;
 }
 
 header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .headshot-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0;
 }
 
 img.headshot {
-    max-width: 200px;
-    border-radius: 50%;
-    width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.services {
+    background-color: #f1f3fa;
+    padding: 4rem 1rem;
 }
 
 @media (max-width: 768px) {
-    ul.topnav li a.nav-link {
-        display: none;
-    }
+  ul.topnav li a.nav-link {
+    display: none;
+  }
 
-    ul.topnav li.dropdownLink {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
+  ul.topnav li.dropdownLink {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
 
-    }
+  ul.topnav.responsive li.dropdownLink {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
 
-    ul.topnav.responsive li.dropdownLink {
-        position: absolute;
-        top: 15px;
-        right: 20px;;
-    }
+  ul.topnav.responsive {
+    flex-direction: column;
+    text-align: right;
+  }
 
-    ul.topnav.responsive {
-        flex-direction: column;
-        text-align: right;
-    }
+  ul.topnav.responsive li a.nav-link {
+    display: block;
+    line-height: 2;
+  }
 
-    ul.topnav.responsive li a.nav-link {
-        display: block;
-        line-height: 2;
-    }
-
-    ul.topnav.responsive li {
-        position: relative;
-        top: 30px;
-        right: 30px;
-    }
+  ul.topnav.responsive li {
+    position: relative;
+    top: 30px;
+    right: 30px;
+  }
 }
