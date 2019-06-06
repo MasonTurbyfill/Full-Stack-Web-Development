@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,SAAS;CAAG",
+    "sources": [
+        "base-dir.sass",
+        "base.sass"
+    ],
+    "names": [],
+    "file": "base-dir.css"
+}
