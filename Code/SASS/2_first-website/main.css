@@ -52,4 +52,20 @@ section {
   .btn-1:hover {
     background-color: #9933ff; }
 
+.btn-2 {
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #333333;
+  color: white;
+  border-width: 0;
+  border-style: none;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  font-size: 2rem; }
+  .btn-2:hover {
+    background-color: #9933ff; }
+  .btn-2:hover {
+    background-color: #4d0099; }
+
 /*# sourceMappingURL=main.css.map */
