@@ -61,6 +61,33 @@ app.put('/ingredients/:ingredientId', function(request, response) {
     }
 });
 
+app.delete('/ingredients', function(request, response) {
+    var ingId = request.body.id;
+
+    if (!ingId || ingId === '') {
+        response.status(500).send({error: 'You must provide ingredient ID'})
+    } else {
+        var objectFound = false;
+
+        for (var x = 0; x < ingredients.length; x++) {
+            var ing = ingredients[x];
+
+            if (ingId === ing.id)
+            {
+                objectFound = true;
+                break;
+            }
+        }
+        if (!objectFound) {
+            response.status(500).send({error:'Ingredient ID not found'});
+        } else {
+            console.log(x);
+            ingredients.splice(x,1);
+            response.send(ingredients);
+        }
+    }
+});
+
 app.listen(3000, function() {
     console.log('First API running on port 3000');
 })
