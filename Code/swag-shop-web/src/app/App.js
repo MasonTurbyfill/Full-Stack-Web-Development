@@ -11,34 +11,39 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {products:[]};
+
     this.loadData = this.loadData.bind(this);
+    this.productList = this.productList.bind(this);
 
     this.loadData();
   }
 
   loadData = () => {
+    var self = this;
     http.getProducts()
-    .then(products => {
-      console.log(products);
+    .then(data => {
+      self.setState({products: data})
     }, err => {
 
     });
   }
 
+  productList = () => {
+    const list = this.state.products.map((product) => 
+      <div className="col-sm-4" key={product._id}>
+        <Product title={product.title} price={product.price} imgUrl={product.imgUrl} alt={product.title} />
+      </div>
+    );
+    return (list);
+  }
+
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            React Tutorial
-          </p>
-        </header> */}
         <div className='container app-main'>
           <div className="row">
-            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
-            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
-            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
+            {this.productList()};
           </div>
         </div>
       </div>
