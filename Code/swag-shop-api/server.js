@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/swag-shop', { useNewUrlParser: true });
+res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
 var Product = require('./model/product');
 var WishList = require('./model/wishlist');
@@ -73,6 +74,6 @@ app.put('/wishlist/product/add', function(req, res) {
     });
 });
 
-app.listen(3000, function() {
+app.listen(3004, function() {
     console.log('Swag Shop API is running on port 3000...');
 });
