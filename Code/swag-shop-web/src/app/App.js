@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Product from '../product/product';
 import HttpService from '../services/http-service';
 
 const http = new HttpService();
@@ -32,15 +33,10 @@ class App extends Component {
           <p>
             React Tutorial
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        <div className='app-main'>
+          <Product/>
+        </div>
       </div>
     );
   }
