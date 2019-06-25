@@ -28,14 +28,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             React Tutorial
           </p>
-        </header>
-        <div className='app-main'>
-          <Product/>
+        </header> */}
+        <div className='container app-main'>
+          <div className="row">
+            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
+            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
+            <Product className='col-sm-4' price='4.23' title='Cool Toy Gun' imgURL='https://images-na.ssl-images-amazon.com/images/I/71Pbz%2BwSH3L._SX466_.jpg'/>
+          </div>
         </div>
       </div>
     );
