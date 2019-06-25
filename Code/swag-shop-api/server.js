@@ -1,17 +1,14 @@
 var express = require('express');
-var cors = require('cors');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/swag-shop', { useNewUrlParser: true });
-res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
 var Product = require('./model/product');
 var WishList = require('./model/wishlist');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cors);
 
 app.post('/product', function(req, res) {
     var product = new Product();
@@ -27,6 +24,7 @@ app.post('/product', function(req, res) {
 });
 
 app.get('/product', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     Product.find({}, function(err, products) {
         if(err) {
             res.status(500).send({error: 'Could not fetch products'});
@@ -75,5 +73,5 @@ app.put('/wishlist/product/add', function(req, res) {
 });
 
 app.listen(3004, function() {
-    console.log('Swag Shop API is running on port 3000...');
+    console.log('Swag Shop API is running on port 3004...');
 });
