@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import './product.css';
+import DataService from '../services/data-service';
+
+let ds = new DataService();
 
 class Product extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.onButtonClicked = this.onButtonClicked.bind(this);
+    }
+
+    onButtonClicked = () => {
+        ds.addWishlistItem(this.props.product);
+    }
+
     render() {
         return(
             <div className='card product'>
-                <img className='card-img-top' src={this.props.imgUrl} alt={this.props.title}/>
+                <img className='card-img-top' src={this.props.product.imgUrl} alt={this.props.product.title}/>
                 <div className="card-block">
-                    <h4 className="card-title">{this.props.title}</h4>
-                    <p className="card-text">Price: ${this.props.price}</p>
-                    <a href='#' className='btn btn-primary'>Add to Wishlist</a>
+                    <h4 className="card-title">{this.props.product.title}</h4>
+                    <p className="card-text">Price: ${this.props.product.price}</p>
+                    <a href='#' onClick={() => this.onButtonClicked()} className='btn btn-primary'>Add to Wishlist</a>
                 </div>
             </div>
         );

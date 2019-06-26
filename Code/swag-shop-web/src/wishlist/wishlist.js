@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './wishlist.css';
 import ProductCondensed from '../product-condensed/product-condensed';
 import DataService from '../services/data-service';
-import NotificationService from '../services/notification-service';
+import NotificationService, {NOTIF_WISHLIST_CHANGED} from '../services/notification-service';
+
+let ns = new NotificationService();
 
 class Wishlist extends Component {
 
@@ -11,7 +13,20 @@ class Wishlist extends Component {
 
         this.state = {wishlist:[]}
 
-        this.jo = this.createWishlist.bind(this);
+        this.createWishlist = this.createWishlist.bind(this);
+        this.onWishlistChanged = this.onWishlistChanged.bind(this);
+    }
+
+    componentDidMount() {
+        ns.addObserver(NOTIF_WISHLIST_CHANGED, this, this.onWishlistChanged);
+    }
+
+    componentWillUnmount() {
+        ns.removeObserver(this, NOTIF_WISHLIST_CHANGED);
+    }
+
+    onWishlistChanged(newWishlist) {
+        this.setState({wishlist: newWishlist});
     }
 
     createWishlist = () => {
