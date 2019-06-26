@@ -24,6 +24,7 @@ app.post('/product', function(req, res) {
 });
 
 app.get('/product', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     Product.find({}, function(err, products) {
         if(err) {
             res.status(500).send({error: 'Could not fetch products'});
@@ -71,6 +72,6 @@ app.put('/wishlist/product/add', function(req, res) {
     });
 });
 
-app.listen(3000, function() {
-    console.log('Swag Shop API is running on port 3000...');
+app.listen(3004, function() {
+    console.log('Swag Shop API is running on port 3004...');
 });
